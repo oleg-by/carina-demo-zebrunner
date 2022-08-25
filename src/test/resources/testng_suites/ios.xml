@@ -1,14 +1,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Carina Demo Tests - Mobile Sample (iOS)" verbose="1" parallel="tests">
+<suite name="Mobile Sample (iOS) Tests" verbose="1" parallel="tests">
 
-	<parameter name="suiteOwner" value="qpsdemo" />
+	<parameter name="suiteOwner" value="oleg-by" />
 	<parameter name="provider" value="mcloud"/>
 	<parameter name="jenkinsJobName" value="Mobile-iOS-Simulator-Demo-Test" />
 	<parameter name="jenkinsJobType" value="ios"/>
 	<parameter name="jenkinsEmail" value="demo@qaprosoft.com" />
 	<parameter name="jenkinsEnvironments" value="DEMO" />
 
-	<parameter name="stringParam::capabilities.app::path to carina demo mobile application" value="https://qaprosoft.s3-us-west-2.amazonaws.com/carinademoexample.zip" />
+	<parameter name="stringParam::capabilities.app::path to carina demo mobile application" value="/Users/obukatich/IdeaProjects/CarinaPracticeTests/src/main/resources/apps/SauceLabs-Demo-App.Simulator.zip" />
 
 	<parameter name="jenkinsMobileDefaultPool" value="ANY" />
 
@@ -17,9 +17,9 @@
 	<parameter name="jenkinsJobExecutionMode" value="continue" />
 	<parameter name="jenkinsAutoScreenshot" value="true"/>
 
-	<test name="Mobile test">
+	<test name="Mobile Sample (iOS) Tests">
 		<classes>
-			<class name="com.qaprosoft.carina.demo.MobileSampleTest" />
+			<class name="com.qaprosoft.carina.demo.mobiletests.MyDemoAppTests" />
 		</classes>
 	</test>
 

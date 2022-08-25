@@ -1,12 +1,15 @@
 package com.qaprosoft.carina.demo.webtests;
 
 import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
+import com.qaprosoft.carina.core.foundation.utils.tag.Priority;
+import com.qaprosoft.carina.core.foundation.utils.tag.TestPriority;
 import com.qaprosoft.carina.demo.enums.Categories;
 import com.qaprosoft.carina.demo.enums.InfoLink;
 import com.qaprosoft.carina.demo.model.Product;
 import com.qaprosoft.carina.demo.webautomationpractice.components.FooterMenu;
 import com.qaprosoft.carina.demo.webautomationpractice.components.HeaderMenu;
 import com.qaprosoft.carina.demo.webautomationpractice.pages.*;
+import com.zebrunner.agent.core.annotation.TestLabel;
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -26,6 +29,8 @@ public class WebAutomationPracticeTests extends BaseTest {
 
     @Test(testName = "Verify home page")
     @MethodOwner(owner = "oleg-by")
+    @TestPriority(Priority.P1)
+    @TestLabel(name = "feature", value = {"web", "regression"})
     public void testHomePage() {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
@@ -42,6 +47,8 @@ public class WebAutomationPracticeTests extends BaseTest {
 
     @Test(testName = "Check the search engine")
     @MethodOwner(owner = "oleg-by")
+    @TestPriority(Priority.P1)
+    @TestLabel(name = "feature", value = {"web", "regression"})
     public void testSearchEngine() {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
@@ -60,6 +67,8 @@ public class WebAutomationPracticeTests extends BaseTest {
 
     @Test(testName = "Register a new account")
     @MethodOwner(owner = "oleg-by")
+    @TestPriority(Priority.P1)
+    @TestLabel(name = "feature", value = {"web", "regression"})
     public void testSignUp() {
         MyAccountPage myAccountPage = authenticationService.register();
         Assert.assertTrue(myAccountPage.isOpened(), "Account is not created.");
@@ -72,6 +81,8 @@ public class WebAutomationPracticeTests extends BaseTest {
 
     @Test(testName = "Sign in")
     @MethodOwner(owner = "oleg-by")
+    @TestPriority(Priority.P1)
+    @TestLabel(name = "feature", value = {"web", "regression"})
     public void testSignIn() {
         MyAccountPage myAccountPage = authenticationService.login();
         Assert.assertTrue(myAccountPage.isOpened(), "Sign In is failed.");
@@ -79,6 +90,8 @@ public class WebAutomationPracticeTests extends BaseTest {
 
     @Test(testName = "Sign out")
     @MethodOwner(owner = "oleg-by")
+    @TestPriority(Priority.P1)
+    @TestLabel(name = "feature", value = {"web", "regression"})
     public void testSignOut() {
         MyAccountPage myAccountPage = authenticationService.login();
         Assert.assertTrue(myAccountPage.isOpened(), "Sign In is failed.");
@@ -91,6 +104,8 @@ public class WebAutomationPracticeTests extends BaseTest {
 
     @Test(testName = "Contact us")
     @MethodOwner(owner = "oleg-by")
+    @TestPriority(Priority.P1)
+    @TestLabel(name = "feature", value = {"web", "regression"})
     public void testContactUs() {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
@@ -112,6 +127,8 @@ public class WebAutomationPracticeTests extends BaseTest {
 
     @Test(testName = "Contact us with attaching file")
     @MethodOwner(owner = "oleg-by")
+    @TestPriority(Priority.P1)
+    @TestLabel(name = "feature", value = {"web", "regression"})
     public void testContactUsWithAttaching() {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
@@ -134,6 +151,8 @@ public class WebAutomationPracticeTests extends BaseTest {
 
     @Test(testName = "Subscribing to newsletter")
     @MethodOwner(owner = "oleg-by")
+    @TestPriority(Priority.P1)
+    @TestLabel(name = "feature", value = {"web", "regression"})
     public void testNewsletterSubscribing() {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
@@ -161,6 +180,8 @@ public class WebAutomationPracticeTests extends BaseTest {
 
     @Test(testName = "Adding product to cart")
     @MethodOwner(owner = "oleg-by")
+    @TestPriority(Priority.P2)
+    @TestLabel(name = "feature", value = {"web", "regression"})
     public void testAddingProductToCart() {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
@@ -187,6 +208,8 @@ public class WebAutomationPracticeTests extends BaseTest {
 
     @Test(testName = "Adding products to cart (several products)")
     @MethodOwner(owner = "oleg-by")
+    @TestPriority(Priority.P3)
+    @TestLabel(name = "feature", value = {"web", "regression"})
     public void testAddingProductsToCart() {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
