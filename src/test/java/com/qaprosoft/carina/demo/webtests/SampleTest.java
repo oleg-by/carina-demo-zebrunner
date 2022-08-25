@@ -1,16 +1,21 @@
 package com.qaprosoft.carina.demo.webtests;
 
 import com.qaprosoft.carina.core.foundation.utils.ownership.MethodOwner;
+import com.qaprosoft.carina.core.foundation.utils.tag.Priority;
+import com.qaprosoft.carina.core.foundation.utils.tag.TestPriority;
 import com.qaprosoft.carina.demo.enums.Categories;
 import com.qaprosoft.carina.demo.webautomationpractice.components.FooterMenu;
 import com.qaprosoft.carina.demo.webautomationpractice.pages.CategoryPage;
 import com.qaprosoft.carina.demo.webautomationpractice.pages.HomePage;
+import com.zebrunner.agent.core.annotation.TestLabel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SampleTest extends BaseTest {
 
     @Test(testName = "Verify home page")
+    @TestPriority(Priority.P1)
+    @TestLabel(name = "feature", value = {"web", "regression"})
     @MethodOwner(owner = "oleg-by")
     public void helloTest() {
         HomePage homePage = new HomePage(getDriver());
