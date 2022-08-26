@@ -17,7 +17,7 @@ public class SampleTest extends BaseTest {
     @TestPriority(Priority.P1)
     @TestLabel(name = "feature", value = {"web", "regression"})
     @MethodOwner(owner = "oleg-by")
-    public void helloTest() {
+    public void sampleTest() {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
         Assert.assertTrue(homePage.isOpened(), "Home page is not opened.");
