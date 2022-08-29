@@ -15,7 +15,7 @@ public class AndroidSampleTest implements IAbstractTest, IMobileUtils {
 
     @Test()
     @MethodOwner(owner = "oleg-by")
-    @TestLabel(name = "Sign in automatically; Log Out", value = {"mobile", "regression"})
+    @TestLabel(name = "Login Service", value = {"mobile", "regression"})
     public void testLoginService() {
         HomePageBase homePage = initPage(getDriver(), HomePageBase.class);
         Assert.assertTrue(homePage.isLogoPresent(), "App Home page isn't opened.");
