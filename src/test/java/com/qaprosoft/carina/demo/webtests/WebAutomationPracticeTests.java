@@ -10,11 +10,14 @@ import com.qaprosoft.carina.demo.webautomationpractice.components.FooterMenu;
 import com.qaprosoft.carina.demo.webautomationpractice.components.HeaderMenu;
 import com.qaprosoft.carina.demo.webautomationpractice.pages.*;
 import com.zebrunner.agent.core.annotation.TestLabel;
+import com.zebrunner.agent.core.annotation.TestRailCaseId;
+import com.zebrunner.agent.core.registrar.TestRail;
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import java.lang.invoke.MethodHandles;
@@ -27,7 +30,15 @@ public class WebAutomationPracticeTests extends BaseTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
+    @BeforeSuite
+    public void setUp() {
+        TestRail.setSuiteId("S18");
+        TestRail.setRunName("WEB tests run");
+        TestRail.setAssignee("Oleg Bukatich");
+    }
+
     @Test(testName = "Verify home page")
+    @TestRailCaseId("C45")
     @MethodOwner(owner = "oleg-by")
     @TestPriority(Priority.P1)
     @TestLabel(name = "feature", value = {"web", "regression"})
@@ -46,6 +57,7 @@ public class WebAutomationPracticeTests extends BaseTest {
     }
 
     @Test(testName = "Check the search engine")
+    @TestRailCaseId("C46")
     @MethodOwner(owner = "oleg-by")
     @TestPriority(Priority.P1)
     @TestLabel(name = "feature", value = {"web", "regression"})
@@ -66,6 +78,7 @@ public class WebAutomationPracticeTests extends BaseTest {
     }
 
     @Test(testName = "Register a new account")
+    @TestRailCaseId("C47")
     @MethodOwner(owner = "oleg-by")
     @TestPriority(Priority.P1)
     @TestLabel(name = "feature", value = {"web", "regression"})
@@ -80,6 +93,7 @@ public class WebAutomationPracticeTests extends BaseTest {
     }
 
     @Test(testName = "Sign in")
+    @TestRailCaseId("C48")
     @MethodOwner(owner = "oleg-by")
     @TestPriority(Priority.P1)
     @TestLabel(name = "feature", value = {"web", "regression"})
@@ -89,6 +103,7 @@ public class WebAutomationPracticeTests extends BaseTest {
     }
 
     @Test(testName = "Sign out")
+    @TestRailCaseId("C49")
     @MethodOwner(owner = "oleg-by")
     @TestPriority(Priority.P1)
     @TestLabel(name = "feature", value = {"web", "regression"})
@@ -103,6 +118,7 @@ public class WebAutomationPracticeTests extends BaseTest {
     }
 
     @Test(testName = "Contact us")
+    @TestRailCaseId("C50")
     @MethodOwner(owner = "oleg-by")
     @TestPriority(Priority.P1)
     @TestLabel(name = "feature", value = {"web", "regression"})
@@ -126,6 +142,7 @@ public class WebAutomationPracticeTests extends BaseTest {
     }
 
     @Test(testName = "Contact us with attaching file")
+    @TestRailCaseId("C51")
     @MethodOwner(owner = "oleg-by")
     @TestPriority(Priority.P1)
     @TestLabel(name = "feature", value = {"web", "regression"})
@@ -150,6 +167,7 @@ public class WebAutomationPracticeTests extends BaseTest {
     }
 
     @Test(testName = "Subscribing to newsletter")
+    @TestRailCaseId("C52")
     @MethodOwner(owner = "oleg-by")
     @TestPriority(Priority.P1)
     @TestLabel(name = "feature", value = {"web", "regression"})
@@ -179,6 +197,7 @@ public class WebAutomationPracticeTests extends BaseTest {
     }
 
     @Test(testName = "Adding product to cart")
+    @TestRailCaseId("C53")
     @MethodOwner(owner = "oleg-by")
     @TestPriority(Priority.P2)
     @TestLabel(name = "feature", value = {"web", "regression"})
@@ -207,6 +226,7 @@ public class WebAutomationPracticeTests extends BaseTest {
     }
 
     @Test(testName = "Adding products to cart (several products)")
+    @TestRailCaseId("C54")
     @MethodOwner(owner = "oleg-by")
     @TestPriority(Priority.P3)
     @TestLabel(name = "feature", value = {"web", "regression"})
