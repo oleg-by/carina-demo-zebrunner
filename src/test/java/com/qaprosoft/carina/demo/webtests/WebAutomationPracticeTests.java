@@ -117,7 +117,7 @@ public class WebAutomationPracticeTests extends BaseTest {
         Assert.assertFalse(header.isUsernameDisplayed(), "The user has not logged out.");
     }
 
-    @Test(testName = "Contact us")
+    @Test(testName = "Check the Contact us (without attaching file)")
     @TestRailCaseId("C50")
     @MethodOwner(owner = "oleg-by")
     @TestPriority(Priority.P1)
@@ -141,7 +141,7 @@ public class WebAutomationPracticeTests extends BaseTest {
                 "The message has not been successfully sent.");
     }
 
-    @Test(testName = "Contact us with attaching file")
+    @Test(testName = "Check the Contact us (with attaching file)")
     @TestRailCaseId("C51")
     @MethodOwner(owner = "oleg-by")
     @TestPriority(Priority.P1)
@@ -166,7 +166,7 @@ public class WebAutomationPracticeTests extends BaseTest {
                 "The message has not been successfully sent.");
     }
 
-    @Test(testName = "Subscribing to newsletter")
+    @Test(testName = "Subscribe to newsletter")
     @TestRailCaseId("C52")
     @MethodOwner(owner = "oleg-by")
     @TestPriority(Priority.P1)
@@ -196,7 +196,7 @@ public class WebAutomationPracticeTests extends BaseTest {
                 "You can use the same emails to subscribe to this newsletter.");
     }
 
-    @Test(testName = "Adding product to cart")
+    @Test(testName = "Add any product to cart")
     @TestRailCaseId("C53")
     @MethodOwner(owner = "oleg-by")
     @TestPriority(Priority.P2)
@@ -225,7 +225,7 @@ public class WebAutomationPracticeTests extends BaseTest {
                 "The information about added product is displayed incorrectly.");
     }
 
-    @Test(testName = "Adding products to cart (several products)")
+    @Test(testName = "Add several products to cart")
     @TestRailCaseId("C54")
     @MethodOwner(owner = "oleg-by")
     @TestPriority(Priority.P3)
